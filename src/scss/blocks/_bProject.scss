@@ -1,0 +1,331 @@
+.b-project {
+  position: relative;
+
+  &__info, &__gallery {
+    @include flex;
+    @include media(md) {
+      display: block;
+      width: 82%;
+      overflow: hidden;
+    }
+    @include media(xsm) {
+      width: 100%;
+    }
+  }
+
+  &__gallery {
+    justify-content: flex-end;
+    margin-top: 135px;
+    position: relative;
+    @include media(md) {
+      margin-left: 18%;
+      width: 82%;
+    }
+    @include media(sm) {
+      margin-left: 10%;
+      width: 90%;
+    }
+    @include media(xsm) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 60px;
+    }
+  }
+
+  &__img {
+    @include size(62.2%, 814px);
+    @include trs;
+    &--active {
+      opacity: 1;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    @include media(md) {
+      width: 100%;
+    }
+    @include media(xs) {
+      height: 616px;
+    }
+  }
+
+  &__content {
+    margin-top: 278px;
+    margin-left: 125px;
+
+    &--left {
+      margin-left: 0;
+      margin-right: 128px;
+    }
+
+    &--none {
+      margin-left: 0 !important;
+    }
+
+    @include media(md) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @include media(md) {
+        display: block;
+        margin-top: 0;
+        margin-left: 18%;
+        margin-bottom: 23px;
+      }
+      @include media(sm) {
+        margin-left: 10%;
+      }
+      @include media(xsm) {
+        margin-left: 10px !important;
+      }
+    }
+
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    @include font(12, 400, true);
+    margin-bottom: 76px;
+    color: #26241d;
+
+    @include media(md) {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    @include size(184px, 1px);
+    background: $main;
+    top: 30%;
+    left: -600%;
+    @include trs;
+    &--left {
+      position: absolute;
+      @include size(496px, 1px);
+      left: 400%;
+      top: 50%;
+      z-index: 4;
+    }
+    @include media(md) {
+      transform: translateX(0%);
+      top: 50%;
+      left: calc(100% + 57px);
+    }
+
+  }
+
+  &__title {
+    @include font(32, 300);
+    line-height: 30px;
+    color: rgba(#26241d, .65);
+  }
+
+  &__button {
+    @include size(199px, 50px);
+    margin-top: 63px;
+    margin-left: 140px;
+  }
+
+  &__link {
+    @include flex(center);
+    @include size(273px, 64px);
+    position: relative;
+    margin-left: auto;
+    margin-top: 37px;
+    @include font(16, 700, true);
+
+    &::before {
+      @include circle(64);
+      @include pseudo;
+      right: 0;
+    }
+
+    &::after {
+      @include pseudo;
+      @include size(76px, 7px);
+      background: url('../img/arrow-slider-accent.png');
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include media(xsm) {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &__slider {
+    @include size(62.2%, 814px);
+
+    img {
+      max-width: none;
+    }
+
+    @include media(md) {
+      width: 100%;
+      height: 980px;
+    }
+    @include media(xsm) {
+      height: 940px;
+    }
+  }
+
+  .swiper {
+    &-button {
+      &-prev, &-next {
+        z-index: 1;
+        top: 100%;
+        transform: translateY(-100%);
+        @include size(106px, 65px);
+        @include media(md) {
+          top: calc(100% - 65px);
+          transform: translateY(0%);
+        }
+        @include media(xsm) {
+          width: 90px;
+        }
+      }
+
+      &-prev {
+        left: 5%;
+
+        &::before {
+          @include size(65px);
+        }
+
+        &::after {
+          transform: rotate(180deg);
+          @include size(76px, 7px);
+          @include media(xsm) {
+            @include size(49px, 7px);
+            background-position-x: right;
+            left: 40%;
+          }
+        }
+
+        &:hover {
+          &::after {
+            left: 30%;
+          }
+
+          &::before {
+            @include size(69px)
+          }
+        }
+
+        @include media(md) {
+          left: 45%;
+        }
+        @include media(sm) {
+          left: 30%;
+        }
+        @include media(xsm) {
+          left: 2%;
+        }
+      }
+
+      &-next {
+        left: 25%;
+        justify-content: flex-end;
+
+        &::after {
+          @include size(65px);
+        }
+
+        &::before {
+          @include size(76px, 7px);
+          transform: rotate(0deg);
+          @include media(xsm) {
+            @include size(49px, 7px);
+            background-position-x: right;
+            left: unset;
+          }
+        }
+
+        &:hover {
+          &::before {
+            right: 32px;
+          }
+
+          &::after {
+            @include size(69px)
+          }
+        }
+
+        @include media(md) {
+          left: calc(100% - 90px);
+          transform: translateX(-100%);
+        }
+        @include media(xs) {
+          left: calc(100% - 72px);
+        }
+        @include media(xsm) {
+          left: 98%;
+        }
+      }
+    }
+
+    &-pagination {
+      z-index: -1;
+      width: 35%;
+      bottom: 5.5%;
+      @include font(12, 400);
+      color: rgba(#1f1e1e, .77);
+
+      span {
+        display: inline-block;
+      }
+
+      &--current {
+        margin-right: 43px;
+        position: relative;
+
+        &::before {
+          @include pseudo;
+          @include align(absolute, true, false);
+          @include size(24px, 1px);
+          background: rgba(#1f1e1e, .77);
+          left: calc(100% + 10px);
+        }
+      }
+
+      @include media(md) {
+        bottom: 4.5%;
+        left: 50%;
+      }
+      @include media(sm) {
+        left: calc(100% - 162px);
+        transform: translateX(-100%);
+        z-index: 3;
+      }
+      @include media(xs) {
+        left: 77%;
+      }
+      @include media(xsm) {
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-container {
+      @include media(md) {
+        position: static;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  @include media(md) {
+    position: relative;
+    overflow: auto;
+  }
+}

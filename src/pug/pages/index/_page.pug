@@ -1,0 +1,18 @@
+body
+    .first-block
+        .first-block__bg
+            img.first-block__bg--circle.wow.fadeIn.zoomIn(data-wow-delay='0.8s')(src="img/main-bg--circle.png")
+            img.first-block__bg--map.wow.fadeIn(data-wow-delay='0.6s')(src="img/main-bg--map.png")
+
+        include ../../blocks/_header
+        include _main
+    main
+    include _company
+    include _business
+    include _news
+    .background-block
+        .background-block__bg.wow.slideInDown(data-wow-delay='0.3s')
+        include _project
+    include _video
+    include ../../blocks/_footer
+    script(src='js/scripts.min.js')

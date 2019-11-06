@@ -1,0 +1,27 @@
+.b-news-video {
+  margin-top: 52px;
+  margin-bottom: 64px;
+  padding-bottom: 0;
+  height: 100% !important;
+  &:before {
+    display: none;
+  }
+
+  &__content {
+    width: 85%;
+    margin: 0 auto;
+    height: 100% !important;
+  }
+
+  &__controls {
+    background-color: rgba(191, 204, 225, 0.3);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .b-news-video__controls {
+    width: 100px;
+    height: 100px;
+  }
+}
+

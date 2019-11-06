@@ -1,0 +1,29 @@
+.b-button {
+  @include flex(center,center);
+  border-radius: 25px;
+  @include trs;
+  border: 3px solid rgba(#d8d9da, .61);
+  box-shadow: none;
+  cursor: pointer;
+
+  &__content {
+    color: $light;
+    @include font(12,700,true);
+    line-height: 30px;
+    @include media(md) {
+      @include font(16);
+    }
+  }
+  &:hover {
+    background: #e6e7e8;
+    span {
+      color: $dark;
+    }
+  }
+  &--light {
+    span {
+      color: #434343;
+    }
+  }
+
+}

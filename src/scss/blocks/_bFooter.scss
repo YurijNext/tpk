@@ -1,0 +1,77 @@
+.b-footer {
+  padding: 74px 0;
+  background: $main;
+  color: $light;
+
+  &__content, &__conteiner {
+    @include flex(center, space-between);
+  }
+  &__conteiner {
+    @include media(xs) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    width: 640px;
+    @include font(14);
+    @include media(md) {
+      display: block;
+    }
+    @include media(xs) {
+      text-align: center;
+      position: relative;
+      margin-top: 85px;
+      width: auto;
+      &::before {
+        @include pseudo;
+        @include size(88px,1px);
+        background: $light;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__copy {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      @include align(absolute, true, false);
+      @include size(88px, 1px);
+      left: calc(100% + 24px);
+      background: #bbb;
+      @include media(md) {
+        display: none;
+      }
+    }
+
+    @include media(md) {
+      @include font(16);
+    }
+  }
+
+  &__policy {
+    border-bottom: 1px solid transparent;
+    @include trs;
+    &:hover {
+      border-bottom-color: $light;
+    }
+    @include media(md) {
+      margin-top: 17px;
+      display: inline-block;
+      @include font(16);
+    }
+  }
+
+  &__button {
+    @include size(236px, 53px);
+    @include media(xs) {
+      order: -1;
+    }
+  }
+  @include media(xs) {
+    padding: 80px 0 40px;
+  }
+}

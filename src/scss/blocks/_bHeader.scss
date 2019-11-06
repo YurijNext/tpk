@@ -1,0 +1,54 @@
+.b-header {
+  position: relative;
+  z-index: 1;
+  &__content {
+    @include flex(false, space-between);
+    @include media(md) {
+      align-items: center;
+    }
+    @include media(xs) {
+      height: 56px;
+    }
+  }
+
+  &__logo {
+    padding-top: 40px;
+    &--mobile {
+      display: none;
+      @include media(xs) {
+        display: block !important;
+      }
+    }
+    @include media(md) {
+      padding-top: 0;
+    }
+    @include media(xs) {
+      display: none;
+    }
+  }
+  &__locales {
+    @include media(md) {
+      margin-left: auto;
+      margin-right: 75px;
+    }
+    @include media(sm) {
+      margin-right: 70px;
+    }
+    @include media(xsm) {
+      margin-right: auto;
+    }
+  }
+  &__mobile {
+    display: none;
+    @include media(md) {
+      @include flex(false, flex-end);
+      @include size(63px, 19px);
+    }
+  }
+  @include media(md) {
+    padding-top: 40px;
+  }
+  @include media(xs) {
+    padding-top: 23px;
+  }
+}

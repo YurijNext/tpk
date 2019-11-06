@@ -1,0 +1,43 @@
+.b-locales {
+  margin-top: 35px;
+  @include size(194px, 69px);
+  @include flex(center, space-between);
+  position: relative;
+  &::before {
+    @include pseudo;
+    @include align(absolute, true, true);
+    @include size(41px, 1px);
+    background: $main;
+    @include media(xsm) {
+      @include size(20px, 1px);
+    }
+  }
+  &__item {
+    @include font(12, 400, true);
+    letter-spacing: .028px;
+    @include flex(center,center);
+    @include circle(69);
+    border-color: transparent;
+    cursor: pointer;
+    color: rgba(#3f3f3f, .62);
+    @include trs;
+    &--active {
+      border-color: $main;
+      color: $main;
+    }
+    @include media(md) {
+      @include size(54px);
+    }
+    @include media(xsm) {
+      @include size(38px);
+      @include font(10)
+    }
+  }
+  @include media(md) {
+    margin-top: 0;
+    @include size(161px,54px)
+  }
+  @include media(xsm) {
+    @include size(100px,54px)
+  }
+}

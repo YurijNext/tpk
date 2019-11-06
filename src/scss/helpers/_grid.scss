@@ -1,0 +1,12 @@
+.container {
+  max-width: 1560px;
+  width: 100%;
+  @include mx--auto;
+  @include media(xl) {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  @include media(xsm) {
+    padding: 0 8px;
+  }
+}

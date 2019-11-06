@@ -1,0 +1,42 @@
+section.b-project
+    .b-project__info
+        .b-project__content.b-project__content--mobile
+            p.b-project__text карта
+        .b-project__img.b-project__img--map.wow.fadeIn(data-wow-delay='0.9s')
+            img(src="img/map.png")
+        .b-project__content
+            .b-project__text
+                .b-project__line.wow.slideInLeft(data-wow-delay='1.2s')
+                p.wow.fadeIn(data-wow-delay='1.5s') карта
+            h2.b-project__title.wow.fadeIn(data-wow-delay='1.8s') Карта Проектов
+            button.b-button.b-button--light.b-project__button.wow.fadeIn(data-wow-delay='2.1s')
+                span.b-button__content Смотреть карту
+        .b-project__content.b-project__content--mobile
+            a.b-project__link.b-arrow-link.b-arrow-link--right(href="#")
+                span Смотреть карту
+    .b-project__gallery
+        .b-project__content.b-project__content--mobile.b-project__content--none
+            .b-project__text
+                .b-project__line.b-project__line--left.wow.slideInRight(data-wow-delay='0.6s')
+                p.wow.fadeIn(data-wow-delay='0.9s') галерея
+        .b-project__content.b-project__content--left
+            .b-project__text
+                .b-project__line.b-project__line--left.wow.slideInRight(data-wow-delay='0.6s')
+                p.wow.fadeIn(data-wow-delay='0.9s') галерея
+            h2.b-project__title.wow.fadeIn(data-wow-delay='1.2s') Медиагалерея
+            button.b-button.b-button--light.b-project__button.wow.fadeIn(data-wow-delay='1.5s')
+                span.b-button__content в галерею
+        .b-project__slider.wow.fadeIn(data-wow-delay='.3s')
+            .swiper-container.js-gallery-slider
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src="img/gallery.jpg")
+                    .swiper-slide
+                        img(src="img/gallery.jpg")
+                    .swiper-slide
+                        img(src="img/gallery.jpg")
+                    .swiper-slide
+                        img(src="img/gallery.jpg")
+            .swiper-button-prev.swiper-button-prev--accent.b-arrow-link.b-arrow-link--left
+            .swiper-pagination
+            .swiper-button-next.swiper-button-next--accent.b-arrow-link.b-arrow-link--right

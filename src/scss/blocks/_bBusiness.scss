@@ -1,0 +1,287 @@
+.b-business {
+  position: relative;
+
+  &__line {
+    @include line($main);
+  }
+
+  &__content {
+    padding: 68px 0 98px;
+    text-align: center;
+  }
+
+  &__blocks {
+    &--mobile {
+      display: none;
+      @include media(xs) {
+        display: block !important;
+      }
+    }
+
+    @include media(xs) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include font(14, 400, true);
+    line-height: 56px;
+    margin-bottom: 50px;
+    @include media(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__draw {
+    @include align(absolute, false, true);
+    @include size(221px);
+    @extend %circle;
+    z-index: -1;
+    background: $main;
+    cursor: pointer;
+    @include trs;
+    @include media(md) {
+      @include size(191px);
+    }
+    @include media(xsm) {
+      @include size(160px)
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 30%;
+    cursor: pointer;
+    @include mx--auto;
+    &:hover {
+      & .b-business__draw {
+        transform: scale(1.1) translateX(-45%);
+      }
+    }
+    p {
+      margin-top: 21px;
+      @include font(24, 300);
+      color: #080808;
+      position: relative;
+      z-index: 99;
+      @include media(md) {
+        @include font(18, 300);
+        max-width: 200px;
+        margin: 30px auto 0;
+      }
+      @include media(xsm) {
+        @include font(15);
+        max-width: 60% !important;
+        line-height: normal;
+        margin-top: 10px;
+      }
+    }
+
+    a {
+      margin-top: 76px;
+    }
+
+  }
+
+  &__circle {
+    position: relative;
+    min-height: 221px;
+    @include mx--auto;
+
+    @include media(xs) {
+      max-width: 100%;
+      min-height: 181px;
+    }
+  }
+
+  &__icon {
+    padding-top: 75px;
+    padding-bottom: 45px;
+
+    @include media(md) {
+      padding-top: 54px;
+    }
+  }
+
+  &__link {
+    @include font(11, 700, true);
+    color: #242424;
+    position: relative;
+    display: block;
+    margin-top: 65px;
+    height: 15px;
+    @include trs;
+
+    &--line {
+      @include size(1px, 40px);
+      @include align(absolute, false, center);
+      top: calc(-250% - 17px);
+      background: $main;
+      transform-origin: bottom;
+    }
+
+    @include media(xs) {
+      margin-top: 88px !important;
+    }
+    @include media(xsm) {
+      margin-top: 70px !important;
+    }
+
+    span {
+      @include trs;
+
+      &:hover {
+        color: $main;
+      }
+    }
+
+  }
+
+  &__text {
+    @include font(24);
+    margin: 73px 0 82px;
+    color: #080808;
+    line-height: 45px;
+    @include font(20, 300);
+    @include media(md) {
+      margin: 70px 0 90px;
+      @include font(26);
+    }
+    @include media(xs) {
+      margin: 117px 0 70px;
+      @include font(30, 400);
+    }
+  }
+
+  &__items {
+    margin-top: -10.5%;
+    @include flex(false, space-between);
+    margin-left: 137px;
+    @include media(md) {
+      margin-left: 0;
+      margin-top: -18%;
+    }
+    @include media(sm) {
+      margin-left: 0;
+      margin-top: -25%;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    @include font(18, 300);
+    line-height: 36px;
+    color: #010101;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      @include align(absolute, false, true);
+      @include size(16px);
+      @extend %circle;
+      background: #bcbec0;
+      top: -20px;
+      @include trs;
+    }
+
+    .b-business__link {
+      opacity: 0;
+    }
+
+    &:hover {
+      .b-business__link {
+        opacity: 1;
+
+        span {
+          animation: fadeIn .8s linear;
+          @include font(12);
+        }
+      }
+
+      .b-business__link--line {
+        animation: drawLine--small .8s linear;
+      }
+
+      &::before {
+        transform: scale(1.5) translateX(-34%);
+      }
+    }
+
+    @include media(md) {
+      @include font(14, 400);
+      line-height: 24px;
+      max-width: 181px;
+      p {
+        min-height: 96px;
+      }
+      br {
+        display: none;
+      }
+    }
+    @include media(xs) {
+      max-width: none;
+      p {
+        max-width: 250px;
+        min-height: auto;
+        @include mx--auto;
+      }
+    }
+  }
+
+  &__slide {
+    margin-top: 25%;
+    @include media(xsm) {
+      margin-top: 30%;
+    }
+  }
+
+  .swiper-button {
+    &-prev, &-next {
+      @include size(80px, 64px);
+      @include media(xsm) {
+        @include size(70px, 50px)
+      }
+    }
+
+    &-prev {
+      &::before {
+        @include circle(64);
+        @include media(xsm) {
+          @include circle(50)
+        }
+      }
+
+      &::after {
+        width: 48px;
+        height: 7px;
+        background: url("../img/business-arrow.png");
+        @include media(xsm) {
+          left: 15%;
+        }
+      }
+
+    }
+
+    &-next {
+      &::after {
+        @include circle(64);
+        @include media(xsm) {
+          @include circle(50);
+        }
+      }
+
+      &::before {
+        width: 48px;
+        height: 7px;
+        background: url("../img/business-arrow.png");
+        @include media(xsm) {
+          right: 15%;
+        }
+      }
+
+      @include media(xsm) {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

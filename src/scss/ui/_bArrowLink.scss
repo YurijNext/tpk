@@ -1,0 +1,15 @@
+.b-arrow-link {
+  cursor: pointer;
+  @include trs;
+  &::before, &::after, img {
+    @include trs;
+  }
+  &--down {
+    &:hover {
+      transform: scale(1.1);
+      &::before, &::after, img {
+        top: -20% !important;
+      }
+    }
+  }
+}

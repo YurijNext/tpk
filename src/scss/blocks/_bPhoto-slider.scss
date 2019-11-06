@@ -1,0 +1,32 @@
+.sliders-wrap {
+  display: flex;
+}
+.slider-nav {
+  width: 530px;
+}
+
+.slider-nav .slick-track{
+  width: 530px !important;
+
+}
+
+.slider-nav .slide {
+  width: 246px !important;
+}
+
+.slider-nav .slick-active {
+  opacity: 0.5;
+}
+
+.slider-nav .slick-current {
+  opacity: 1;
+}
+
+.slider-big {
+  max-width: 986px;
+}
+
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+}

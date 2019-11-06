@@ -1,0 +1,39 @@
+.bradcr {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding-right: 56px;
+    position: relative;
+    &:after {
+      @include pseudo();
+      width: 35px;
+      height: 1px;
+      background-color: #272727;
+      right: 10px;
+      top: 60%;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $main;
+    font-weight: 400;
+    @include trs();
+    &:hover {
+      color: $menu;
+    }
+  }
+
+  &__link--disabled {
+    color: $menu;
+  }
+}

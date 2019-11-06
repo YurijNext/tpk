@@ -1,0 +1,46 @@
+.b-company {
+  position: relative;
+  background: $main;
+  &__line {
+    @include line($light);
+  }
+  &__content {
+    padding: 68px 0 104px;
+    text-align: center;
+    color: $light;
+    @include media(md) {
+      padding: 96px 0 104px;
+    }
+  }
+  &__title {
+    @include font(14,400,true);
+    line-height: 56px;
+    margin-bottom: 73px;
+    @include media(md) {
+      line-height: normal;
+    }
+    @include media(xs) {
+      @include font(16);
+      margin-bottom: 60px;
+    }
+  }
+  &__text {
+    @include font(20,400);
+    line-height: 45px;
+    @include mx--auto;
+    @include media(md) {
+      @include font(26)
+    }
+    @include media(xs) {
+      max-width: 420px;
+    }
+    @include media(xsm) {
+      @include font(16);
+      line-height: 24px;
+    }
+  }
+  &__button {
+    @include size(200px,50px);
+    margin: 62px auto 0;
+  }
+}

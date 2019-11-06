@@ -1,0 +1,29 @@
+$breakpoints: (
+  "xsm": 480px,
+  "xs": 641px,
+  "sm": 769px,
+  "md": 1110px,
+  "lg": 1440px,
+  "xl": 1599px
+);
+$z-indexes: (
+  'modal': 3,
+  'dropdown': 2,
+  'default': 1,
+  'below': -1,
+);
+
+// Colors
+$light: #fff;
+$menu: #48484a;
+$lightenText: #26241d;
+$ourTitle: #080808;
+$dark: #000;
+$main: #0081c9;
+$accent: #3b9ed5;
+$gray: #272727;
+
+$mainFont: 'Open Sans', sans-serif;
+
+
+

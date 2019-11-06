@@ -1,0 +1,90 @@
+.swiper{
+  &-button-prev,  &-button-next {
+    @include size(290px,82px);
+    @include flex(center, space-between);
+    background: none;
+    color: $light;
+    @include trs;
+    &:hover {
+      opacity: .5;
+    }
+    span {
+      @include font(12,700);
+      line-height: 30px;
+    }
+  }
+  &-button-prev {
+    &::before {
+      @include pseudo;
+      @include circle(82);
+      border-color: $light;
+    }
+    &::after {
+      @include pseudo;
+      background: url("../img/arrow-slider.png") no-repeat center center/cover;
+      @include size(97px,9px);
+      left: 42px;
+    }
+    &--accent {
+      &::before {
+        border-color: $main;
+      }
+      &::after {
+        background: url("../img/arrow-slider-accent.png") no-repeat center center/cover;
+      }
+      &:hover {
+        &::before {
+          border-color: $main !important;
+        }
+      }
+    }
+    &:hover {
+      &::after {
+        left: 32px;
+      }
+      &::before {
+        @include circle(86);
+      }
+    }
+
+
+  }
+  &-button-next {
+    &::after {
+      @include pseudo;
+      @include circle(82);
+      border-color: $light;
+    }
+    &::before {
+      @include pseudo;
+      background: url("../img/arrow-slider.png") no-repeat center center/cover;
+      @include size(97px,9px);
+      transform: rotate(-180deg);
+      right: 42px;
+    }
+
+    &--accent {
+      &::after {
+        border-color: $main;
+      }
+      &::before {
+        background: url("../img/arrow-slider-accent.png") no-repeat center center/cover;
+      }
+      &:hover {
+        &::after {
+          border-color: $main !important;
+        }
+      }
+    }
+    &:hover {
+      &::before {
+        right: 32px;
+      }
+      &::after {
+        @include circle(86);
+        border-color: $light;
+      }
+    }
+  }
+
+}
