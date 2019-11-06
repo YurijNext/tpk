@@ -53,11 +53,16 @@
     width: 30%;
     cursor: pointer;
     @include mx--auto;
+
     &:hover {
       & .b-business__draw {
         transform: scale(1.1) translateX(-45%);
+        @include media(xs) {
+          transform: scale(1) translateX(-50%);
+        }
       }
     }
+
     p {
       margin-top: 21px;
       @include font(24, 300);
@@ -80,7 +85,9 @@
     a {
       margin-top: 76px;
     }
-
+    @include media(xs) {
+      width: 100%;
+    }
   }
 
   &__circle {
@@ -100,6 +107,9 @@
 
     @include media(md) {
       padding-top: 54px;
+    }
+    @include media(xs) {
+      padding-bottom: 0;
     }
   }
 
@@ -186,6 +196,11 @@
 
     .b-business__link {
       opacity: 0;
+      @include media(xs) {
+        opacity: 1;
+        height: 20px;
+        margin-top: 60px !important;
+      }
     }
 
     &:hover {
@@ -221,7 +236,7 @@
     @include media(xs) {
       max-width: none;
       p {
-        max-width: 250px;
+        max-width: 60% !important;
         min-height: auto;
         @include mx--auto;
       }
