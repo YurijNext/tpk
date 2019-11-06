@@ -1,0 +1,74 @@
+.railway {
+
+  &__bradcr {
+    padding: 70px 0 85px;
+  }
+
+  &__title {
+    margin-bottom: 90px;
+    font: 400 32px/42px $mainFont, sans-serif;
+    color: $gray;
+  }
+
+  &__text {
+    margin-bottom: 90px;
+    padding-left: 130px;
+    font: 400 18px/42px $mainFont, sans-serif;
+    color: $dark;
+  }
+
+  &__advants {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &_title,
+    &_text {
+      font: 400 12px/16px $mainFont, sans-serif;
+      text-align: center;
+      color: $gray;
+    }
+
+    &_title {
+      margin-bottom: 21px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &_text {
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    &_item {
+      text-align: center;
+      width: 210px;
+    }
+
+    &_img {
+      position: relative;
+      margin-bottom: 70px;
+      text-align: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 1px;
+        height: 32px;
+        background-color: $main;
+      }
+
+      img {
+        object-fit: contain;
+        object-position: center;
+        max-width: 60px;
+        height: 28px;
+      }
+    }
+  }
+}
