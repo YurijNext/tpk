@@ -100,14 +100,7 @@ $(document).ready(function () {
     menu.removeClass(activeClass)
   });
 
-  // $('.b-slider').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 0,
-  //   arrows: false,
-  //   asNavFor: '.slider-nav',
-  //   useTransform: false,
-  // });
-  //
+  /** Slick settings **/
   $('.slider-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -124,16 +117,35 @@ $(document).ready(function () {
     asNavFor: '.slider-nav',
     swipe: false,
     arrows: false,
-    infinite: true
+    infinite: false,
   });
 
-  $('.slick-next').on('click', function() {
-    $('.slider-big').slick('slickNext');
-  });
+  /** Custom slick settings **/
+  const customSlickSettings = (function() {
+    $('.swiper-button-prev').css('display', 'none');
 
-  $('.slick-prev').on('click', function() {
-    $('.slider-big').slick('slickPrev');
-  });
+    $('.swiper-button-next').on('click', function() {
+      $('.slider-big').slick('slickNext');
+      $('.slick-track').css('transform', 'translate3d(0px, 0px, 0px)');
+    });
+
+    $('.swiper-button-prev').on('click', function() {
+      $('.slider-big').slick('slickPrev');
+      $('.slick-track').css('transform', 'translate3d(0px, 0px, 0px)');
+    });
+
+
+    $('.slider-big').on('afterChange', function(event, slick, currentSlide) {
+      let btnPrev = $('.swiper-button-prev');
+      let text = $(slick.$slides[currentSlide]).data('slick-index');
+      $('.js-curent').text('0' + (text + 1));
+      // $('.sliders-wrap .swiper-button-prev').addClass('button-next--visible');
+      $(slick.$slides[currentSlide]).data('slick-index') == 0 ? btnPrev.fadeOut() : btnPrev.fadeIn();
+    })
+
+  })();
+
+
 
 
 
