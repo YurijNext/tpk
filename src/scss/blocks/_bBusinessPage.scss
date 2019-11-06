@@ -1,0 +1,56 @@
+.b-business-page {
+  &__bradcr {
+    margin-top: 75px;
+  }
+
+  &__title {
+    position: relative;
+    @include flex(false, false);
+    line-height: normal;
+
+    span {
+      text-align: left;
+      margin-left: 145px;
+      @include font(14px, 400, true);
+      color: #272727;
+    }
+  }
+
+  &__line {
+    @include size(115px, 1px);
+    background: $main;
+    @include align(absolute, true);
+    left: 0;
+  }
+
+  &__text {
+    max-width: 54%;
+    line-height: 48px;
+    @include mx--auto;
+    margin-top: 40px;
+    @include media(md) {
+      max-width: 80%;
+    }
+    @include media(sm) {
+      max-width: 100%;
+      line-height: 32px;
+    }
+  }
+  &__info {
+    margin-bottom: 83px;
+    @include media(xs) {
+      margin: 30px 0;
+    }
+  }
+  &__button {
+    @include size(265px, 50px);
+    background: $main;
+    border-color: $main;
+    @include mx--auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @include media(xs) {
+      margin-bottom: 0;
+    }
+  }
+}
