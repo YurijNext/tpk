@@ -1,0 +1,20 @@
+.bSection__title {
+  @include font(14);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $gray;
+  padding-left: 140px;
+  position: relative;
+  margin-top: 94px;
+  margin-bottom: 70px;
+
+  &:before {
+    @include pseudo();
+    width: 115px;
+    height: 1px;
+    background-color: $main;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

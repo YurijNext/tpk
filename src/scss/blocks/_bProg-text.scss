@@ -1,0 +1,24 @@
+.bProg {
+  &__title {
+    margin-top: 80px;
+    margin-bottom: 63px;
+    font: 400 32px/42px $mainFont, sans-serif;
+    color: $gray;
+  }
+
+  &__text {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding-left: 130px;
+    font: 400 18px/42px $mainFont, sans-serif;
+    color: $dark;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px)  {
+  .bProg__text {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Include FontAwesome 5-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <!-- Main Style-->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Sharing-->
+  <!-- Fav-->
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+</head>
+<body class="b-contacts">
+  <div class="modal" id="js-modal">
+    <button class="modal__close"></button>
+    <h3 class="modal__title">Оставить запрос</h3>
+    <form class="modal__form">
+      <input class="modal__input" type="text" name="name" placeholder="Ваше имя">
+      <input class="modal__input" type="tel" name="phone" placeholder="Телефон">
+      <textarea class="modal__message modal__input" placeholder="Коментарий"></textarea>
+      <button class="b-button b-button--light modal__button"><span class="b-button__content">Оставить</span></button>
+    </form>
+  </div>
+  <header class="b-header" id="header">
+    <div class="container">
+      <div class="b-header__content"><a class="b-logo b-header__logo" href="/"><img src="img/logo.png"></a><a class="b-header__logo b-header__logo--mobile b-logo"><img src="img/logo--mobile.png"></a>
+        <nav class="b-nav b-header__nav"><a class="b-nav__link" href="#">Компания</a><a class="b-nav__link" href="#">Наш бизнес</a><a class="b-nav__link" href="#">Новости и медиа</a><a class="b-nav__link" href="#">Контакты</a></nav>
+        <div class="b-header__locales b-locales">
+          <div class="b-locales__item b-locales__item--active js-change-locale"><span>ру</span></div>
+          <div class="b-locales__item js-change-locale"><span>en</span></div>
+        </div>
+        <div class="b-header__mobile">
+          <div class="b-header__burger b-burger js-burger"><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main></main>
+  <div class="b-contacts-page">
+    <section class="bradcr b-business-page__bradcr">
+      <div class="container">
+        <ul class="bradcr__list">
+          <li class="bradcr__item"><a class="bradcr__link" href="/">Главная</a></li>
+          <li class="bradcr__item"><a class="bradcr__link bradcr__link--disabled" href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="container">
+      <h3 class="bSection__title">Контакты</h3>
+    </div>
+    <div class="container">
+      <div class="bAddress">
+        <div class="bAddress__contacts">
+          <h4 class="bAddress__title">Москва</h4>
+          <ul class="bAddress__list">
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/map-icon.png" alt="icon"><span class="bAddress__address">121151, Россия, г. Москва, наб. Тараса Шевченко, д. 23а</span></li>
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/phone-icon.png" alt="icon">
+              <ul class="bAddress__phone-list">
+                <li class="bAddress__phone-item"><a class="bAddress__phone-link" href="tel:74957306650">+7 (495) 730 66 50</a></li>
+                <li class="bAddress__phone-item"><a class="bAddress__phone-link" href="tel:74957306650">+7 (495) 730 66 54</a></li>
+              </ul>
+            </li>
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/mail-icon.png" alt="icon"><a class="bAddress__mail-link" href="mail:tepk@tepk-invest.ru">tepk@tepk-invest.ru</a></li>
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/web-icon.png" alt="icon"><a class="bAddress__mail-link" href="http://tepk-invest.ru">tepk-invest.ru</a></li>
+          </ul>
+        </div>
+        <div class="bAddress__contacts">
+          <h4 class="bAddress__title">Кызыл</h4>
+          <ul class="bAddress__list">
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/map-icon.png" alt="icon"><span class="bAddress__address">667000, Россия, Республика Тыва, г. Кызыл, ул. Чульдума, д. 40а</span></li>
+            <li class="bAddress__item"><img class="bAddress__icon" src="img/phone-icon.png" alt="icon">
+              <ul class="bAddress__phone-list">
+                <li class="bAddress__phone-item bAddress__phone-item--def"><a class="bAddress__phone-link" href="tel:+73942220581"> +7 (39422) 20 581</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bMaps">
+      <div class="container">
+        <div class="bMaps__controls">
+          <button class="bMaps__control-btn bMaps__control-btn--active" id="js-moscow"><span class="bMaps__control-text">Москва</span></button>
+          <button class="bMaps__control-btn" id="js-kizil"><span class="bMaps__control-text">Кызыл</span></button>
+        </div>
+      </div>
+      <div class="bMaps__container">
+        <div class="bMap" id="js-map"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="b-footer" id="footer">
+    <div class="container">
+      <div class="b-footer__conteiner">
+        <div class="b-footer__content">
+          <p class="b-footer__copy">2014-2019. «ТЭПК». Все права защищены</p><a class="b-footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+        <button class="b-footer__button b-button b-button--modal"><span class="b-button__content">Оставить запрос</span></button>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?apikey=0a7ad2dd-daec-4dac-84d8-e01e38600600&amp;lang=ru_RU"></script>
+  <script src="js/scripts.min.js"></script>
+</body>

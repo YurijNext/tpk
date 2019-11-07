@@ -1,0 +1,43 @@
+.bMaps {
+  &__controls {
+    display: flex;
+    margin-bottom: 34px;
+  }
+
+  &__control-btn {
+    width: 205px;
+    height: 45px;
+    background: none;
+    border: none;
+    border-left: 1px solid #808285;
+    display: flex;
+    align-items: center;
+    @include font(12);
+    color: $gray;
+    text-transform: uppercase;
+    font-family: 'OpenSans-Bold', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    @include trs();
+    &--active {
+      color: $main;
+      border-color: $main;
+      @include font(14);
+    }
+  }
+
+  &__control-text {
+    margin-left: 44px;
+  }
+
+  &__container {
+    width: 100%;
+    height: 638px;
+    background-color: $main;
+  }
+}
+
+.bMap {
+  width: 100%;
+  height: 100%;
+}

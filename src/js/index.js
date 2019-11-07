@@ -77,6 +77,24 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  const modal = (function() {
+    const openBtn = $('.b-button--modal'),
+          closeBtn = $('.modal__close'),
+          modal = $('#js-modal');
+
+    openBtn.on('click', function(e) {
+      e.preventDefault();
+      modal.fadeIn();
+    });
+
+    closeBtn.on('click', function(e) {
+      e.preventDefault();
+      modal.fadeOut();
+    })
+
+  })();
+
   /** Video Settings  **/
   $('.b-video__content').on('click', function () {
     control.toggleClass('b-video__controls--active');
@@ -145,6 +163,89 @@ $(document).ready(function () {
 
   })();
 
+  /** Yandex maps settings**/
+  const moskow = $('#js-moscow'),
+        kizil = $('#js-kizil'),
+        mapContainer = $('#js-map');
+
+  ymaps.ready(initMoskow);
+
+    moskow.on('click', function(e) {
+      e.preventDefault();
+      $('.bMaps__control-btn').removeClass('bMaps__control-btn--active');
+      $(this).addClass('bMaps__control-btn--active');
+      mapContainer.empty();
+      ymaps.ready(initMoskow);
+  });
+
+    kizil.on('click', function(e) {
+        e.preventDefault();
+        $('.bMaps__control-btn').removeClass('bMaps__control-btn--active');
+        $(this).addClass('bMaps__control-btn--active');
+        mapContainer.empty();
+        ymaps.ready(initKizil);
+    });
+
+  function initMoskow(){
+    // Создание карты.
+    var myMap = new ymaps.Map("js-map", {
+      center: [55.746228, 37.546093],
+      zoom: 15,
+      controls: []
+    }),
+
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Mark',
+          balloonContent: 'Mark'
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/map-icon-big.png',
+          // Размеры метки.
+          iconImageSize: [29, 44],
+
+        });
+
+      myMap.geoObjects.add(myPlacemark);
+  }
+
+
+
+
+    function initKizil(){
+        // Создание карты.
+        var myMap = new ymaps.Map("js-map", {
+                center: [51.717898, 94.437092],
+                zoom: 15,
+                controls: []
+            }),
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            ),
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Mark',
+                balloonContent: 'Mark'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/map-icon-big.png',
+                // Размеры метки.
+                iconImageSize: [29, 44],
+
+            });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
 
 
 

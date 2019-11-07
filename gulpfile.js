@@ -57,6 +57,7 @@ gulp.task('js', function () {
       'src/libs/swiper/swiper.min.js',
       'src/libs/animate/wow.min.js',
       'src/libs/slick/slick.min.js',
+      'src/libs/jquery-modal/jquery.modal.min.js',
       'src/js/index.js', // Always at the end
     ])
     .pipe(sourcemaps.init())

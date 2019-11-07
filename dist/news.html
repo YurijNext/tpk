@@ -14,6 +14,16 @@
   <!-- Global site tag (gtag.js) - Google Analytics-->
 </head>
 <body class="gallery">
+  <div class="modal" id="js-modal">
+    <button class="modal__close"></button>
+    <h3 class="modal__title">Оставить запрос</h3>
+    <form class="modal__form">
+      <input class="modal__input" type="text" name="name" placeholder="Ваше имя">
+      <input class="modal__input" type="tel" name="phone" placeholder="Телефон">
+      <textarea class="modal__message modal__input" placeholder="Коментарий"></textarea>
+      <button class="b-button b-button--light modal__button"><span class="b-button__content">Оставить</span></button>
+    </form>
+  </div>
   <header class="b-header" id="header">
     <div class="container">
       <div class="b-header__content"><a class="b-logo b-header__logo" href="/"><img src="img/logo.png"></a><a class="b-header__logo b-header__logo--mobile b-logo"><img src="img/logo--mobile.png"></a>
@@ -147,7 +157,7 @@
         <div class="b-footer__content">
           <p class="b-footer__copy">2014-2019. «ТЭПК». Все права защищены</p><a class="b-footer__policy" href="#">Политика конфиденциальности</a>
         </div>
-        <button class="b-footer__button b-button"><span class="b-button__content">Оставить запрос</span></button>
+        <button class="b-footer__button b-button b-button--modal"><span class="b-button__content">Оставить запрос</span></button>
       </div>
     </div>
   </footer>
