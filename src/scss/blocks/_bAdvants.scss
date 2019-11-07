@@ -53,9 +53,14 @@
   }
 }
 
+.elegast .bAbout__img-block {
+  padding-top: 0;
+}
+
 @media only screen and (max-width: 750px) {
   .bAdvants {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 
     &__item {
