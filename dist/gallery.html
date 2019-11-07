@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Include FontAwesome 5-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <!-- Main Style-->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Sharing-->
+  <!-- Fav-->
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+</head>
+<body class="gallery">
+  <header class="b-header" id="header">
+    <div class="container">
+      <div class="b-header__content"><a class="b-logo b-header__logo" href="/"><img src="img/logo.png"></a><a class="b-header__logo b-header__logo--mobile b-logo"><img src="img/logo--mobile.png"></a>
+        <nav class="b-nav b-header__nav"><a class="b-nav__link" href="#">Компания</a><a class="b-nav__link" href="#">Наш бизнес</a><a class="b-nav__link" href="#">Новости и медиа</a><a class="b-nav__link" href="#">Контакты</a></nav>
+        <div class="b-header__locales b-locales">
+          <div class="b-locales__item b-locales__item--active js-change-locale"><span>ру</span></div>
+          <div class="b-locales__item js-change-locale"><span>en</span></div>
+        </div>
+        <div class="b-header__mobile">
+          <div class="b-header__burger b-burger js-burger"><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="gallery__title-wrap">
+    <div class="container">
+      <div class="gallery__brd">
+        <ul class="gallery__brd-list">
+          <li class="gallery__brd-item"><a class="gallery__brd-link" href="index.html">Главная</a></li>
+          <li class="gallery__brd-item"><span class="gallery__brd-disabled">Медиагалерея</span></li>
+        </ul>
+      </div>
+      <h3 class="gallery__title">Медиагалерея</h3>
+    </div>
+  </div>
+  <section class="bNews bGallery">
+    <div class="container">
+      <div class="bNews__grid">
+        <div class="bNews__sort">
+          <ul class="bNews__sort-list">
+            <li class="bNews__themes bNews__item">Все темы</li>
+            <li class="bNews__time bNews__item">За все время</li>
+          </ul>
+        </div>
+        <div class="bNews__column">
+          <div class="bNews__post wow fadeIn" data-wow-delay="0.3s">
+            <div class="bNews__post-img">
+              <div class="bGallery__icon"><img src="img/gallery/icon-1.png"></div>
+              <div class="b-video__content">
+                <video class="b-video__player" poster="video/1.jpg" src="video/video.mp4" controls>
+                  <p>Ваш браузер не поддерживает HTML5 Видео</p>
+                </video>
+                <div class="b-video__controls"></div>
+              </div>
+            </div>
+            <div class="bNews__post-content">
+              <h5 class="bNews__post-title">С Новым годом</h5><span class="bGallery__them">Тематика</span>
+            </div>
+          </div>
+          <div class="bNews__post wow fadeIn" data-wow-delay="0.3s">
+            <div class="bNews__post-img">
+              <div class="bGallery__icon"><img src="img/gallery/icon-2.png"><span class="bGallery__total">6 фото</span></div><img class="img-responsive" src="img/gallery/7.png" alt="Photo">
+            </div>
+            <div class="bNews__post-content">
+              <h5 class="bNews__post-title">Глобальная компания</h5><span class="bGallery__them">Тематика</span>
+            </div>
+          </div>
+        </div>
+        <div class="bNews__column bNews__column--right">
+          <div class="bNews__post bNews__post--mt wow fadeIn" data-wow-delay="0.3s">
+            <div class="bNews__post-img">
+              <div class="bGallery__icon"><img src="img/gallery/icon-2.png"><span class="bGallery__total">6 фото</span></div><img class="img-responsive" src="img/gallery/6.jpg" alt="Photo">
+            </div>
+            <div class="bNews__post-content">
+              <h5 class="bNews__post-title">Глобльная компания</h5><span class="bGallery__them">Тематика</span>
+            </div>
+          </div>
+          <div class="bNews__post bNews__post--mt wow fadeIn" data-wow-delay="0.3s">
+            <div class="bNews__post-img">
+              <div class="bGallery__icon"><img src="img/gallery/icon-1.png"></div>
+              <div class="b-video__content">
+                <video class="b-video__player" poster="video/2.jpg" src="video/video.mp4" controls>
+                  <p>Ваш браузер не поддерживает HTML5 Видео</p>
+                </video>
+                <div class="b-video__controls"></div>
+              </div>
+            </div>
+            <div class="bNews__post-content">
+              <h5 class="bNews__post-title">С Новым годом</h5><span class="bGallery__them">Тематика</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bNews__btn-wrap wow fadeIn" data-wow-delay="0.3s">
+      <button class="b-button b-button--light bNews__next-page"><span class="b-button__content">Следующая страница</span></button>
+    </div>
+  </section>
+  <footer class="b-footer" id="footer">
+    <div class="container">
+      <div class="b-footer__conteiner">
+        <div class="b-footer__content">
+          <p class="b-footer__copy">2014-2019. «ТЭПК». Все права защищены</p><a class="b-footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+        <button class="b-footer__button b-button"><span class="b-button__content">Оставить запрос</span></button>
+      </div>
+    </div>
+  </footer>
+  <script src="js/scripts.min.js"></script>
+</body>

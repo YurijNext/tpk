@@ -35,5 +35,7 @@
 
   &__link--disabled {
     color: $menu;
+    pointer-events: none;
+    cursor: default;
   }
 }

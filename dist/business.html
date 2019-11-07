@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Include FontAwesome 5-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <!-- Main Style-->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- Sharing-->
+  <!-- Fav-->
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+</head>
+<body>
+  <header class="b-header" id="header">
+    <div class="container">
+      <div class="b-header__content"><a class="b-logo b-header__logo" href="/"><img src="img/logo.png"></a><a class="b-header__logo b-header__logo--mobile b-logo"><img src="img/logo--mobile.png"></a>
+        <nav class="b-nav b-header__nav"><a class="b-nav__link" href="#">Компания</a><a class="b-nav__link" href="#">Наш бизнес</a><a class="b-nav__link" href="#">Новости и медиа</a><a class="b-nav__link" href="#">Контакты</a></nav>
+        <div class="b-header__locales b-locales">
+          <div class="b-locales__item b-locales__item--active js-change-locale"><span>ру</span></div>
+          <div class="b-locales__item js-change-locale"><span>en</span></div>
+        </div>
+        <div class="b-header__mobile">
+          <div class="b-header__burger b-burger js-burger"><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main></main>
+  <div class="b-busines-page">
+    <section class="bradcr b-business-page__bradcr">
+      <div class="container">
+        <ul class="bradcr__list">
+          <li class="bradcr__item"><a class="bradcr__link" href="/">Главная</a></li>
+          <li class="bradcr__item"><a class="bradcr__link bradcr__link--disabled" href="#">Наш бизнес</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="b-business">
+      <div class="container">
+        <div class="b-business__content">
+          <div class="b-business__title b-business-page__title wow fadeIn">
+            <div class="b-business-page__line wow fadeIn" data-wow-delay="0.3s"></div><span class="wow fadeIn" data-wow-delay="0.5s">наш бизнес</span>
+          </div>
+          <div class="b-business-page__info">
+            <div class="b-business-page__icon"><img class="wow fadeIn" data-wow-delay="0.8s" src="img/business-page.png"></div>
+            <p class="b-business-page__text wow fadeIn" data-wow-delay="1.1s">«Тувинская Энергетическая Промышленная Корпорация» (ТЭПК) занимается строительством крупнейших в современной России промышленного и инфраструктурных объектов.</p>
+          </div>
+          <div class="b-business__blocks">
+            <div class="b-business__info">
+              <div class="b-business__draw wow fadeIn" data-wow-delay="1.1s"></div>
+              <div class="b-business__circle">
+                <div class="b-business__icon"><img class="wow fadeIn" data-wow-delay="1.3s" src="img/business-icon.png">
+                  <p class="wow fadeIn" data-wow-delay="0.9s">Горно-обогатительный комбинат</p>
+                </div>
+              </div><a class="b-business__link" href="#">
+                <div class="b-business__link--line wow drawLine--small" data-wow-delay=".8s"></div><span class="wow fadeIn" data-wow-delay="1s">о проекте</span></a>
+            </div>
+            <div class="b-business__items wow fadeIn" data-wow-delay="1.8s">
+              <div class="b-business__item">
+                <p>Железнодорожная линия <br>«Элегест-Кызыл-Курагино»</p><a class="b-business__link" href="#">
+                  <div class="b-business__link--line"></div><span>о проекте</span></a>
+              </div>
+              <div class="b-business__item">
+                <p>Угольный портовый терминал <br>в районе мыса Бурный в Хабаровском крае</p><a class="b-business__link" href="#">
+                  <div class="b-business__link--line"></div><span>о проекте</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="b-business__blocks b-business__blocks--mobile">
+            <div class="b-business__slider">
+              <div class="swiper-container js-business-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide b-business__slide">
+                    <div class="b-business__item">
+                      <p>Железнодорожная линия <br>«Элегест-Кызыл-Курагино»</p><a class="b-business__link" href="#">о проекте</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="b-business__item">
+                      <div class="b-business__info">
+                        <div class="b-business__draw"></div>
+                        <div class="b-business__circle">
+                          <div class="b-business__icon"><img src="img/business-icon.png">
+                            <p>Горно-обогатительный комбинат</p>
+                          </div>
+                        </div><a class="b-business__link" href="#">о проекте</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide b-business__slide">
+                    <div class="b-business__item">
+                      <p>Угольный портовый терминал <br>в районе мыса Бурный в Хабаровском крае</p><a class="b-business__link" href="#">о проекте</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev--accent"></div>
+                <div class="swiper-button-next swiper-button-next--accent"></div>
+              </div>
+            </div>
+          </div>
+          <button class="b-business-page__button b-button wow fadeIn" type="button" data-wow-delay="1.3s"><span class="b-button__content">Карта проектов</span></button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="b-footer" id="footer">
+    <div class="container">
+      <div class="b-footer__conteiner">
+        <div class="b-footer__content">
+          <p class="b-footer__copy">2014-2019. «ТЭПК». Все права защищены</p><a class="b-footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+        <button class="b-footer__button b-button"><span class="b-button__content">Оставить запрос</span></button>
+      </div>
+    </div>
+  </footer>
+  <script src="js/scripts.min.js"></script>
+</body>

@@ -48,7 +48,7 @@ $(document).ready(function () {
     }
   });
   /** Init Gallery Slider **/
-  let gallerySlider = new Swiper('.js-gallery-slider', {
+  let gallerySlider = new Swiper('.js-news-slider', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

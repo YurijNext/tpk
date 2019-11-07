@@ -30,10 +30,12 @@
     margin-right: 38px;
     @include font(16);
     color: $gray;
+    white-space: nowrap;
   }
 
   &__socials-list {
     display: flex;
+    min-width: 108px;
   }
 
   &__socials-item {
